@@ -17,13 +17,10 @@
     <input name="name" class="lname" id="02"><br>
     <label for="03">Inter your birth date</label>
     <input name="name" class="birth"  id="03"><br>
-    <div class="error" id="error3"></div>
     <label for="04">Inter your emial</label>
     <input name="email" class="myemail"  id="04"><br>
-    <div class="error" id="error4"></div>
     <label for="05">Inter your password</label>
     <input name="password" class="mypass"  id="05"><br>
-    <div class="error" id="error5"></div>
    <input type="submit" value="register">
 
 </form>
@@ -66,7 +63,7 @@ document.getElementById("register").onsubmit = function(){
 }
 document.getElementById("register").onsubmit = function(){
     let password = document.getElementById("05").value;
-   password =/[0-9][a-z]/;
+   passwordRE =/[0-9][a-z]/;
     let validResult5 =passwordRE.test(password);
     if(validResult5 == false){
         return false;
