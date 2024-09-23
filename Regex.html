@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   
+    
+    
+</head>
+<body>
+    <form id="register" method="get" action="">
+    <label for="01">Inter your first name</label>
+    <input name="name" class="fname"  id="01"><br>
+    <label for="02">Inter your last  name</label>
+    <input name="name" class="lname" id="02"><br>
+    <label for="03">Inter your birth date</label>
+    <input name="name" class="birth"  id="03"><br>
+    <div class="error" id="error3"></div>
+    <label for="04">Inter your emial</label>
+    <input name="email" class="myemail"  id="04"><br>
+    <div class="error" id="error4"></div>
+    <label for="05">Inter your password</label>
+    <input name="password" class="mypass"  id="05"><br>
+    <div class="error" id="error5"></div>
+   <input type="submit" value="register">
+
+</form>
+<script>
+document.getElementById("register").onsubmit = function(){
+    let fname = document.getElementById("01").value;
+    fnameRE =/[a-z]/ig;
+    let validResult1 = fnameRE.test(fname);
+    if(validResult == false){
+        return false;
+    }
+    return true;
+}
+document.getElementById("register").onsubmit = function(){
+    let lname = document.getElementById("02").value;
+    lnameRE =/[a-z]/ig;
+    let validResult2 = fnameRE.test(lname);
+    if(validResult2 == false){
+        return false;
+    }
+    return true;
+}
+document.getElementById("register").onsubmit = function(){
+    let birth = document.getElementById("03").value;
+    birthRE =/\d{2}\-\d{2}-\d{3,}/;
+    let validResult3 =birthRE.test(birth);
+    if(validResult3 == false){
+        return false;
+    }
+    return true;
+}
+document.getElementById("register").onsubmit = function(){
+    let email = document.getElementById("04").value;
+    emailRE =/\w+@\w+.com/;
+    let validResult4 =emailRE.test(email);
+    if(validResult4 == false){
+        return false;
+    }
+    return true;
+}
+document.getElementById("register").onsubmit = function(){
+    let password = document.getElementById("05").value;
+   password =/[0-9][a-z]/;
+    let validResult5 =passwordRE.test(password);
+    if(validResult5 == false){
+        return false;
+    }
+    return true;
+}
+</script>
+</body>
+</html>
